@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: run a one-line script
         run: echo this is terraform code
 
-      - uses: actions/checkout@v2
-      - uses: hashicorp/setup-terraform@v2
+      - uses: actions/checkout@v1
+      - uses: hashicorp/setup-terraform@v1
 
       - name: Terraform Init
         id: init
@@ -56,27 +56,27 @@ jobs:
 #         with:
 #           terraform_version: 1.0.0
 
-      # - name: Create New Relic deployment marker
-      #   uses: newrelic/deployment-marker-action@v1
-      #   with:
-      #     apiKey: ${{ secrets.NEW_RELIC_API_KEY }}
-      #     accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
+#       - name: Create New Relic deployment marker
+#         uses: newrelic/deployment-marker-action@v1
+#         with:
+#           apiKey: ${{ secrets.NEW_RELIC_API_KEY }}
+#           accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
           
 
-      # - name: Terraform Init
-      #   id  : init
-      #   run : terraform init
+#       - name: Terraform Init
+#         id  : init
+#         run : terraform init
 
-      # - name: Terraform refresh
-      #   run : terraform refresh
+#       - name: Terraform refresh
+#         run : terraform refresh
 
-      # - name: Terraform Plan
-      #   id  : plan
-      #   run : terraform plan 
+#       - name: Terraform Plan
+#         id  : plan
+#         run : terraform plan 
         
 
-      # - name: Terraform Apply
-      #   run : terraform apply -auto-approve
+#       - name: Terraform Apply
+#         run : terraform apply -auto-approve
 
-      # - name: Terraform Destroy
-      #   run : terraform destroy -auto-approve
+#       # - name: Terraform Destroy
+#       #   run : terraform destroy -auto-approve
