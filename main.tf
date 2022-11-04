@@ -15,7 +15,7 @@ provider "newrelic" {
 }
 
 resource "newrelic_workload" "test_workload" {
-    name = "Test Workload2"
+    name = "Test Workload222"
     account_id = 3649334 
 
     entity_guids = ["MzY0OTMzNHxJTkZSQXxOQXw0MDk4NTc0ODc1NzI4NTM1Mjc"]
