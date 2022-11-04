@@ -38,16 +38,16 @@ jobs:
         id  : init
         run : terraform init
 
-      # - name: Terraform refresh
-      #   run : terraform refresh
+      - name: Terraform refresh
+        run : terraform refresh
 
-      - name: Terraform Plan
-        id  : plan
-        run : terraform plan 
+      # - name: Terraform Plan
+      #   id  : plan
+      #   run : terraform plan 
         
 
       # - name: Terraform Apply
       #   run : terraform apply -auto-approve
 
-      # - name: Terraform Destroy
-      #   run : terraform destroy -auto-approve
+      - name: Terraform Destroy
+        run : terraform destroy -auto-approve
