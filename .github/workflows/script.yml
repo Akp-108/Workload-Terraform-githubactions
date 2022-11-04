@@ -1,5 +1,8 @@
 name: First workflow Terraform
 
+env:
+  working-directory: main.tf
+
 # Controls when the workflow will run
 on:
 
@@ -37,6 +40,7 @@ jobs:
       - name: Terraform Init
         id  : init
         run : terraform init
+        working-directory: ${{env.working-directory}}
 
       # - name: Terraform refresh
       #   run : terraform refresh
@@ -44,6 +48,7 @@ jobs:
       - name: Terraform Plan
         id  : plan
         run : terraform plan 
+        working-directory: ${{env.working-directory}}
         
 
       # - name: Terraform Apply
@@ -51,3 +56,4 @@ jobs:
 
       # - name: Terraform Destroy
       #   run : terraform destroy -auto-approve
+        # working-directory: ${{env.working-directory}}
